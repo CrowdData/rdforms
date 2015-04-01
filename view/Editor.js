@@ -140,12 +140,12 @@ define(["dojo/_base/declare",
             } else if (card.min > 0) {
                 target = card.min;
             } else if (item instanceof PropertyGroup) {
-                target = 0;
+                target = 1;
             } else if (item instanceof Group) {
                 if (item.getProperty() == null) {
                     target = 1;
                 } else {
-                    target = 0;
+                    target = 1;
                 }
             } else {
                 target = 1;
@@ -245,7 +245,7 @@ define(["dojo/_base/declare",
                     }, construct.create("div", null, fieldDiv));
                 }
 
-                else if (datatype === "http://www.w3.org/2001/XMLSchema#date" || datatype === "http://purl.org/dc/terms/W3CDTF") {
+                else if (datatype === "http://www.w3.org/2001/XMLSchema#dateTime" || datatype === "http://www.w3.org/2001/XMLSchema#date" || datatype === "http://purl.org/dc/terms/W3CDTF") {
                     tb = new DateTime({binding: binding, item: item}, construct.create("div", null, fieldDiv));
                 } else if (datatype === "http://www.w3.org/2001/XMLSchema#duration") {
                     tb = new Duration({disabled: !item.isEnabled(), binding: binding}, construct.create("div", null, fieldDiv));
