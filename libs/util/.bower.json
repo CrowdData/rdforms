@@ -1,0 +1,14 @@
+{
+  "name": "util",
+  "homepage": "https://github.com/dojo/util",
+  "version": "1.9.3",
+  "_release": "1.9.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.9.3",
+    "commit": "a02b7e9daebcb8de99f645d5a80e64ec8d676a36"
+  },
+  "_source": "https://github.com/dojo/util.git",
+  "_target": "1.9.3",
+  "_originalSource": "dojo-util"
+}

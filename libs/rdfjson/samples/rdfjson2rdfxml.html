@@ -1,0 +1,33 @@
+<html>
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <script src="../node_modules/requirejs/require.js"></script>
+  </head>
+  <body>
+  <script type="text/javascript">
+      require.config({
+          paths: {
+              "rdfjson": "..",
+              "text": "../node_modules/text/text",
+              "domReady": "../node_modules/domReady/domReady"
+          }
+      });
+      require([
+          'rdfjson/formats/converters',        //Contains the rdf/json to rdf/xml converter
+          'text!rdfjson/samples/sampleRDF.json', //Load the sample RDF as RDF/JSON
+          'domReady'             //Wait until the dom is ready.
+      ], function(converters, sampleRDF) {
+          document.getElementById("source").innerHTML = sampleRDF;
+          document.getElementById("destination").innerHTML = converters.rdfjson2rdfxml(JSON.parse(sampleRDF));
+      });
+	</script>
+	<div style="width:50%;height:100%;float:left;">
+		<h1>RDF/JSON loaded from <a href="sampleRDF.json">sampleRDF.json</a></h1>
+		<textarea style="width: 99%;height:500px;" id="source"></textarea>
+	</div>
+	<div style="width:50%;height:100%;float:left;">
+		<h1>Converted to RDF/XML</h1>
+		<textarea style="width:99%;height:500px;" id="destination"></textarea>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "rdfjson",
+  "_release": "b8e3a0bef7",
+  "_resolution": {
+    "type": "branch",
+    "branch": "develop",
+    "commit": "b8e3a0bef769886517dcaf14728a842a47f8d4d5"
+  },
+  "_source": "https://bitbucket.org/metasolutions/rdfjson.git",
+  "_target": "develop",
+  "_originalSource": "https://bitbucket.org/metasolutions/rdfjson.git"
+}
